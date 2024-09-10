@@ -26,6 +26,13 @@ jobs:
         run: |
           cp -r tamaweb/* .
 
+      # Update .gitmodules to point to the current repository
+      - name: Update .gitmodules
+        run: |
+          sed -i 's|url = https://github.com/autosam/Tamaweb.git|url = https://github.com/tamawebgame/tamawebgame.git|' .gitmodules
+          git submodule sync
+          git submodule update --init --recursive
+
       # Install NodeJS and CLI tools
       - uses: actions/setup-node@v3
         with:
