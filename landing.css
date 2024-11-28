@@ -1,0 +1,214 @@
+:root {
+    --bg-color-1: #F1B1C1;
+    --btn-bg-color-1: #D486B8;
+    --btn-bg-color-on-1: #3e2736;
+    --btn-bg-color-2: #dc98f7;
+    --btn-bg-color-on-2: #3b0052;
+}
+
+.kumbh-sans-font {
+    font-family: "Kumbh Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings:
+        "YOPQ" 300;
+}
+
+.btn {
+    all: unset;
+    background-color: #F1B1C1;
+    color: #4a002d;
+    border: 2px solid #D98DBA;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+}
+.btn > img {
+    width: 20px;
+}
+.btn .big-img {
+    width: 60px;
+    position: absolute;
+    right: -10px;
+    z-index: 2;
+}
+.btn:hover, .btn:active {
+    background-color: #d4879a;
+    border-color: #d4879a;
+    color: #4f0014;
+}
+.btn.primary {
+    background-color: #6D3396;
+    border-color: #6D3396;
+    color: #ffffff;
+}
+.btn.primary:hover {
+    background-color: #542178;
+    border-color: #542178;
+    color: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color-1);
+    background: url("img/bg_tiled_01.png");
+    background-size: 200px;
+    font-family: "Kumbh Sans";
+    padding: 30px;
+    animation: background-scroll 45s infinite linear;
+}
+
+@keyframes background-scroll {
+    to {
+        background-position: 100px;
+    }
+}
+
+.top-gradient {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    background: linear-gradient(0deg, transparent, #d264aab4);
+}
+
+.w-initial {
+    width: initial;
+}
+
+h2 {
+    margin: 0;
+}
+
+.logo {
+    width: 340px;
+}
+
+.logo-container {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.left-container {
+    width: 65%;
+    max-width: 700px;
+}
+
+.right-container {
+    width: 35%;
+}
+
+.panel {
+    background: rgba(255, 255, 255, 0.25);
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.75));
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid white;
+    backdrop-filter: blur(6px);
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.backdrop-img-1 {
+    position: absolute;
+    left: -18%;
+    top: -28%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.screenshots-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.screenshots-container img {
+    width: 96px;
+}
+
+.carousel {
+    display: flex;
+    animation: scrolling 30s infinite alternate linear;
+    gap: 20px;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-70%);
+    }
+}
+
+.platforms-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: flex-start;
+}
+.platform-badge {
+    display: flex;
+    gap: 8px;
+    border: 1px solid;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 6px;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+.platform-badge > img {
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-width: 600px){
+    body {
+        padding: 10px;
+    }
+    .backdrop-img-1 {
+        display: none;
+    }
+    .content {
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+    .left-container {
+        width: 100%;
+    }
+    .right-container {
+        width: 100%;
+    }
+}
