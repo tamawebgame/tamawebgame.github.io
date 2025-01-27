@@ -59,6 +59,7 @@ body {
     margin: 0;
     font-family: "Kumbh Sans";
     background-color: #ffe8ec;
+    color: #c25567;
     /* background-size: 200px;
     background-color: var(--bg-color-1);
     background: url("img/bg_tiled_01.png");
@@ -108,7 +109,7 @@ h2 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 40px;
+    gap: 20px;
     justify-content: space-between;
     padding: 40px;
 }
