@@ -62,8 +62,12 @@ body {
     background-size: 200px;
     font-family: "Kumbh Sans";
     padding: 30px;
-    animation: background-scroll 45s infinite linear;
-    color: #301422;
+    /* animation: background-scroll 45s infinite linear; */
+    color: #6f4e3f;
+    background: #FFE1D4;
+
+    margin: 0;
+    padding: 0;
 }
 
 @keyframes background-scroll {
@@ -94,13 +98,17 @@ h2 {
     width: 340px;
 }
 
-.logo-container {
+.hero-container {
     width: 100%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    /* margin-top: 20px;
+    margin-bottom: 30px; */
+    height: 400px;
+    background-color: #f9cbb6;
+    gap: 40px;
+    overflow: hidden;
 }
 
 .content {
@@ -109,6 +117,7 @@ h2 {
     align-items: flex-start;
     gap: 20px;
     justify-content: space-between;
+    padding: 40px;
 }
 
 .container {
@@ -162,10 +171,12 @@ h3 {
 .screenshots-container {
     display: flex;
     overflow: hidden;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .screenshots-container img {
-    width: 96px;
+    width: 128px;
 }
 
 .carousel {
