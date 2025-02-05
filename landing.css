@@ -63,6 +63,7 @@ body {
     font-family: "Kumbh Sans";
     padding: 30px;
     animation: background-scroll 45s infinite linear;
+    color: #301422;
 }
 
 @keyframes background-scroll {
@@ -106,8 +107,14 @@ h2 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 40px;
+    gap: 20px;
     justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .left-container {
@@ -120,12 +127,18 @@ h2 {
 }
 
 .panel {
-    background: rgba(255, 255, 255, 0.25);
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.75));
+    background: rgba(255, 255, 255, 1);
+    /* background: linear-gradient(45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.75)); */
     padding: 20px;
-    border-radius: 20px;
-    border: 2px solid white;
+    border-radius: 8px;
+    /* border: 2px solid rgba(255, 255, 255, 0.49); */
     backdrop-filter: blur(6px);
+}
+
+.panel > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .links-container {
