@@ -173,7 +173,7 @@ h3 {
 
 .carousel {
     display: flex;
-    animation: scrolling 3s infinite alternate linear;
+    animation: scrolling 30s infinite alternate linear;
     gap: 20px;
 }
 
