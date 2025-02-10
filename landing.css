@@ -129,9 +129,10 @@ h2 {
 .panel {
     background: rgba(255, 255, 255, 0.25);
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.75));
+    background: #edcec52d;
     padding: 20px;
     border-radius: 20px;
-    border: 2px solid white;
+    border: 2px solid #edcec57f;
     backdrop-filter: blur(6px);
 }
 
@@ -317,4 +318,19 @@ h3 {
     flex-direction: row-reverse;
     align-items: flex-end;
     background-image: url(img/repeating_fence_01.png);
+}
+
+/* footer */
+.footer {
+    margin-top: 40px;
+    font-size: small;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+.footer img {
+    display: none;
+}
+.footer:hover img {
+    display: block;
 }
