@@ -1,5 +1,21 @@
 [
     {
+        "image": "valentine_25.png",
+        "title": "Valentine Update 2025",
+        "subTitle": "14th February, 2025",
+        "paragraphs": [
+            {
+                "title": "New Valentine-themed additions:",
+                "text": "- New room background\n - 2 New Accessories\n - 5 New Furniture Items",
+                "images": ["images/valentine_25.png"]
+            },
+            {
+                "title": "UI Improvements",
+                "text": "Made improvements to the UI to enhance user experience"
+            }
+        ]
+    },
+    {
         "image": "updatenew_11.webp",
         "title": "Update 1/31/2025",
         "subTitle": "31st January, 2025",
