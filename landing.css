@@ -56,6 +56,13 @@
     color: #ffffff;
 }
 
+.btn:disabled {
+    background: darkgray;
+    color: rgb(109, 109, 109);
+    border-color: darkgray;
+    pointer-events: none;
+}
+
 body {
     background-color: var(--bg-color-1);
     background: url("img/bg_tiled_01.png");
@@ -296,7 +303,7 @@ h3 {
     padding: 4px 8px;
     border-radius: 10px;
 }
-.posts {
+.posts, .scrollable-container {
     display: flex;
     gap: 8px;
     overflow: auto;
@@ -333,4 +340,96 @@ h3 {
 }
 .footer:hover img {
     display: block;
+}
+
+/* input code */
+.input-code {
+    width: fit-content;
+    padding: 10px 20px;
+    display: flex;
+    /* background-color: white; */
+    flex-direction: row;
+    gap: 40px;
+    box-shadow: 1px 1px black;
+    background: #4a002d;
+}
+
+.input-code__icon {
+    width: 40px;
+    object-fit: contain;
+    font-size: xx-large;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.4);
+}
+.input-code__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.input-code label {
+    font-size: small;
+    color: white;
+}
+
+.input-code b {
+    background: #ffffff;
+    width: fit-content;
+    border: 2px dashed;
+    padding: 2px 8px;
+}
+
+.input-code {
+    -webkit-mask-image: 
+        radial-gradient(circle at 80px 20px, transparent 10px, red 10.5px);
+    -webkit-mask-size: 100%, 5px 44px;
+    -webkit-mask-repeat: repeat, repeat-y;
+    -webkit-mask-position: 0 -20px, 137.5px;
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+}
+
+/* generic */
+.hidden {
+    display: none;
+}
+.margin-none {
+    margin: 0;
+}
+/* flex */
+.flex {
+    display: flex;
+}
+.flex-container-col {
+    flex-direction: column;
+}
+.flex-container-row {
+    flex-direction: row;
+}
+.gap-2 {
+    gap: 12px;
+}
+
+/* form-control */
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form-control > input, .form-control > textarea {
+    all: unset;
+    border-bottom: 1px solid;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 8px 12px;
+}
+.form-control > input:focus, .form-control > textarea:focus {
+    /* border-bottom:2px solid black; */
+    outline: 1px solid;
+    background: rgba(255, 255, 255);
+}
+.form-control > small {
+    font-size: x-small;
+    margin-top: -8px;
 }
