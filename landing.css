@@ -235,6 +235,9 @@ h3 {
     .right-container {
         width: 100%;
     }
+    #discord-widget {
+        height: 70px;
+    }
 }
 
 /* discord widget */
