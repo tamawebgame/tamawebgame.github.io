@@ -236,7 +236,7 @@ h3 {
         width: 100%;
     }
     #discord-widget {
-        height: 70px;
+        pointer-events: none;
     }
 }
 
