@@ -1,5 +1,29 @@
 [
     {
+        "image": "fortune_teller.png",
+        "title": "Update 3/13/2025",
+        "subTitle": "13th March, 2025",
+        "paragraphs": [
+            {
+                "title": "New Fortune Teller NPC!",
+                "text": "You can visit the new Fortune Teller to find out your pet's next possible life stage evolution based on your current Care Rating!\nYou can even find out what your child will look like with any of your friends if your pet is an adult!",
+                "images": ["images/fortune_teller.png"]
+            },
+            {
+                "title": "Significant improvements to save system",
+                "text": "This update brings significant improvements to the save system, allowing for many more possibilities and far fewer limitations.\nMany issues related to running out of storage space and disappearing progress will no longer occur with this new system."
+            },
+            {
+                "title": "New Friend Search",
+                "text": "You can now directly search for your friend's user id (uid) in the friends section of the phone."
+            },
+            {
+                "title": "Bugfixes and improvements",
+                "text": "- Adjusting sleeping hours now changes the in-game time of day.\n- Fix pets wanting items they cannot use.\n- Many smaller bugfixes and improvements."
+            }
+        ]
+    },
+    {
         "image": "valentine_25.png",
         "title": "Valentine Update 2025",
         "subTitle": "14th February, 2025",
