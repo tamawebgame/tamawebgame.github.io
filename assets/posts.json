@@ -1,5 +1,52 @@
 [
     {
+        "image": "1.6.png",
+        "title": "Update 4/4/2025",
+        "subTitle": "4th April, 2025",
+        "paragraphs": [
+            {
+                "title": "Added Gardening!",
+                "text": "Start cultivating a variety of vegetables and exotic plants in your brand-new garden! Visit the market to purchase seeds and kickstart your gardening journey. Remember to water your plants regularly to keep them thriving!",
+                "images": ["images/gardening.png"]
+            },
+            {
+                "title": "New Life Stages: Child and Elder",
+                "text": "Experience a new evolution path for your beloved pets! Baby pets now grow into children before becoming teens, and adult pets can evolve into elders after extended gameplay with auto-age enabled.",
+                "images": ["images/elder_child_stage.png"]
+            },
+            {
+                "title": "Homeworld Getaways: Explore Your Pet’s Home Planet",
+                "text": "Send your pets on exciting activities on their home planet! They’ll embark on these adventures for a few minutes or up to several hours in real time, returning with boosted stats and unique moodlets.",
+                "images": ["images/homeworldgetaway.png"]
+            },
+            {
+                "title": "Cooking with Ingredients",
+                "text": "Craft your own meals and snacks using ingredients harvested from your garden! Discover 18 exclusive new dishes with special effects—available only through cooking.",
+                "images": ["images/cooking_harvests.png"]
+            },
+            {
+                "title": "Added Crafting!",
+                "text": "Unleash your creativity by crafting new accessories, furniture, and even new rooms! Use exotic materials gathered from your gardening efforts to enhance your home.",
+                "images": ["images/crafting.png"]
+                
+            },
+            {
+                "title": "Sell Your Food in the Market",
+                "text": "Become a merchant by selling your home-cooked food in the market! Regular food items fetch modest prices, but specially crafted dishes yield much higher profits.",
+                "images": ["images/sell_food.png"]
+            },
+            {
+                "title": "New Set: Collage",
+                "text": "Explore the latest Collage set in the Crafting menu! The set includes 1 room background, 4 furniture items, and 3 accessories to give your room a fresh look.",
+                "images": ["images/collage_set.png"]
+            },
+            {
+                "title": "Bug Fixes and Quality Improvements",
+                "text": "- Fortune teller now displays all possible evolutions based on all care ratings, not just the player’s current rating.\n- Added 'Out of Stock' labels to market shops and improved stock system functionality.\n- Enhanced visuals in the wedding scene with heart particles.\n- Polished the birthday party scene for a better experience.\n- Fixed game speed slowdown on high-refresh-rate monitors and displays."
+            }
+        ]
+    },
+    {
         "image": "fortune_teller.png",
         "title": "Update 3/13/2025",
         "subTitle": "13th March, 2025",
@@ -40,7 +87,6 @@
         ]
     },
     {
-        "image": "updatenew_11.webp",
         "title": "Update 1/31/2025",
         "subTitle": "31st January, 2025",
         "paragraphs": [
@@ -110,7 +156,6 @@
         ]
     },
     {
-        "image": "10.webp",
         "title": "Update 11/28/2024",
         "subTitle": "28th November, 2024",
         "paragraphs": [
@@ -177,7 +222,6 @@
         ]
     },
     {
-        "image": "9.png",
         "title": "Update 11/7/2024",
         "subTitle": "7th November, 2024",
         "paragraphs": [
@@ -199,7 +243,6 @@
         ]
     },
     {
-        "image": "8.png",
         "title": "Update 9/12/2024",
         "subTitle": "12th September, 2024",
         "paragraphs": [
@@ -263,7 +306,6 @@
         ]
     },
     {
-        "image": "7.png",
         "title": "Update 8/14/2024",
         "subTitle": "14th August, 2024",
         "paragraphs": [
@@ -365,7 +407,6 @@
         ]
     },
     {
-        "image": "6.png",
         "title": "Update 7/11/2024",
         "subTitle": "11th July, 2024",
         "paragraphs": [
@@ -401,7 +442,6 @@
         ]
     },
     {
-        "image": "5.png",
         "title": "Update 6/13/2024",
         "subTitle": "13th June, 2024",
         "paragraphs": [
@@ -469,7 +509,6 @@
         ]
     },
     {
-        "image": "4.png",
         "title": "Update 4/29/2024",
         "subTitle": "29th April, 2024",
         "paragraphs": [
@@ -496,7 +535,6 @@
         ]
     },
     {
-        "image": "log.png",
         "title": "Update 3/24/2024",
         "subTitle": "24th March, 2024",
         "paragraphs": [
@@ -523,7 +561,6 @@
         ]
     },
     {
-        "image": "2.png",
         "title": "Update 3/22/2024",
         "subTitle": "22nd March, 2024",
         "paragraphs": [
