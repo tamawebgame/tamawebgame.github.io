@@ -1,6 +1,6 @@
 (async () => {
   const getPosts = async () => {
-    const res = await fetch("assets/posts.json");
+    const res = await fetch("https://tamawebgame.github.io/blog/posts.json");
     const posts = res.json();
     return posts;
   };
