@@ -20,7 +20,8 @@
         ".postContainer__infoContainer__title"
       );
 
-      image.src = `assets/post-images/${post.image ?? "lg.png"}`;
+      // image.src = `assets/post-images/${post.image ?? "lg.png"}`;
+      image.src = `https://tamawebgame.github.io/blog/post-images/${post.image ?? "lg.png"}`;
       subTitle.textContent = post.subTitle;
       title.textContent = post.title;
 
