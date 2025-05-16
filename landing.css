@@ -1,5 +1,5 @@
 :root {
-    --bg-color-1: #F1B1C1;
+    --bg-color-1: #ffffff;
     --btn-bg-color-1: #D486B8;
     --btn-bg-color-on-1: #3e2736;
     --btn-bg-color-2: #dc98f7;
@@ -15,11 +15,27 @@
         "YOPQ" 300;
 }
 
+body {
+    background-color: var(--bg-color-1);
+    /* background: url("img/bg_tiled_01.png"); */
+    background-size: 200px;
+    font-family: "Kumbh Sans";
+    padding: 30px;
+    animation: background-scroll 45s infinite linear;
+    color: #572d00;
+    margin-left: 96px;
+}
+
+@keyframes background-scroll {
+    to {
+        background-position: 100px;
+    }
+}
+
 .btn {
     all: unset;
-    background-color: #F1B1C1;
-    color: #4a002d;
-    border: 2px solid #D98DBA;
+    background-color: #FFDEBF;
+    color: #C57B57;
     width: fit-content;
     padding: 10px 20px;
     border-radius: 6px;
@@ -61,22 +77,6 @@
     color: rgb(109, 109, 109);
     border-color: darkgray;
     pointer-events: none;
-}
-
-body {
-    background-color: var(--bg-color-1);
-    background: url("img/bg_tiled_01.png");
-    background-size: 200px;
-    font-family: "Kumbh Sans";
-    padding: 30px;
-    animation: background-scroll 45s infinite linear;
-    color: #4a002d;
-}
-
-@keyframes background-scroll {
-    to {
-        background-position: 100px;
-    }
 }
 
 .top-gradient {
@@ -131,18 +131,12 @@ h2 {
 
 .right-container {
     width: 35%;
-    position: sticky;
-    top: 16px;
+    /* position: sticky;
+    top: 16px; */
 }
 
 .panel {
-    background: rgba(255, 255, 255, 0.25);
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.75));
-    background: #edcec52d;
     padding: 20px;
-    border-radius: 20px;
-    border: 2px solid #edcec57f;
-    backdrop-filter: blur(6px);
 }
 
 .panel > ul {
@@ -356,7 +350,7 @@ h3 {
     flex-direction: row;
     gap: 40px;
     box-shadow: 1px 1px black;
-    background: #4a002d;
+    background: #FFCF9D;
 }
 
 .input-code__icon {
@@ -376,7 +370,7 @@ h3 {
 
 .input-code label {
     font-size: small;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .input-code b {
@@ -437,4 +431,20 @@ h3 {
 .form-control > small {
     font-size: x-small;
     margin-top: -8px;
+}
+
+.sidebar-container {
+    background: #FFCF9D;
+    height: 100vh;
+    width: 96px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: start;
+    padding: 20px 0;
+}
+.sidebar-container > .icon {
+    width: 80%;
 }
