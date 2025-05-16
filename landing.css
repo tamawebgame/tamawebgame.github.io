@@ -131,6 +131,8 @@ h2 {
 
 .right-container {
     width: 35%;
+    position: sticky;
+    top: 16px;
 }
 
 .panel {
