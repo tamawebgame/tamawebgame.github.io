@@ -63,6 +63,9 @@ export function ResourceRow({ onDelete, index, rowData }) {
                         { label: 'Sprites', disabled: true },
                         ...SPRITES,
 
+                        { label: 'Animals', disabled: true },
+                        ...ANIMAL_CHARACTERS,
+
                         { label: 'Babies', disabled: true },
                         ...PET_BABY_CHARACTERS,
 
