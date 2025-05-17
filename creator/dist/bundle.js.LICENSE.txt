@@ -50,6 +50,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+/**
+ * filesize
+ *
+ * @copyright 2024 Jason Mulligan <jason.mulligan@avoidwork.com>
+ * @license BSD-3-Clause
+ * @version 10.1.6
+ */
+
 /** @license React v16.13.1
  * react-is.production.min.js
  *
