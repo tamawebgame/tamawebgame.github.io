@@ -22,7 +22,7 @@ body {
     font-family: "Kumbh Sans";
     padding: 30px;
     animation: background-scroll 45s infinite linear;
-    color: #572d00;
+    color: #9c5100;
     margin-left: 96px;
 }
 
@@ -137,6 +137,9 @@ h2 {
 
 .panel {
     padding: 20px;
+    background-color: color-mix(in srgb, currentColor 5%, transparent);
+    border-radius: 16px;
+    border: 1px solid color-mix(in srgb, currentColor 5%, transparent);
 }
 
 .panel > ul {
@@ -268,18 +271,19 @@ h3 {
     cursor: pointer;
     transition: transform 0.25s;
     /* border-color: #d98dba; */
-    color: #744176;
+    /* color: #744176; */
     background: #ffffff;
 }
 .postContainer:hover {
     transform: translateY(-8px);
 }
 .postContainer__imageContainer > img {
-    max-height: 128px;
+    height: 128px;
     min-width: 256px;
     object-fit: cover;
     border-bottom: 1px solid;
     width: 100%;
+    display: block;
     /* image-rendering: pixelated; */
 }
 .postContainer__infoContainer {
@@ -297,7 +301,7 @@ h3 {
     font-weight: bold;
 }
 .postContainer__infoContainer__type {
-    background: #7441762e;
+    background: color-mix(in srgb, currentColor 12%, transparent);
     font-size: x-small;
     padding: 4px 8px;
     border-radius: 10px;
