@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "checkJs": true,
+    "allowJs": true,
+    "baseUrl": "./",
+    "jsx": "react-jsx",
+    "lib": ["dom", "esnext"]
+  },
+  "exclude": ["node_modules"],
+  
+}

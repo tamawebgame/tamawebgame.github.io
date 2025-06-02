@@ -1,0 +1,9 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit",
+    "source.addMissingImports.ts": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "eslint.alwaysShowStatus": true
+}
