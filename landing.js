@@ -81,7 +81,16 @@
     };
   };
 
+  const populateDiscordMemberCount = async () => {
+    const discordInviteId = '2Gaepf3Vhv';
+    const endpoint = `https://discord.com/api/v9/invites/${discordInviteId}?with_counts=true&with_expiration=true`;
+    const response = await fetch(endpoint);
+    const json = await response.json();
+    document.querySelector('#discord-member-count').textContent = `${json.approximate_member_count}`
+  }
+
   initializeFeedback();
+  populateDiscordMemberCount();
   const posts = await getPosts();
   createPostElements(posts);
 })();

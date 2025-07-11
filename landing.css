@@ -34,6 +34,9 @@
 .btn > img {
     width: 20px;
 }
+.btn > i {
+    width: 20px;
+}
 .btn .big-img {
     width: 60px;
     position: absolute;
@@ -204,7 +207,7 @@ h3 {
 }
 .platform-badge {
     display: flex;
-    gap: 8px;
+    gap: 16px;
     border: 1px solid;
     width: fit-content;
     padding: 5px 10px;
@@ -212,10 +215,6 @@ h3 {
     flex-grow: 1;
     justify-content: center;
     align-items: center;
-}
-.platform-badge > img {
-    width: 20px;
-    height: 20px;
 }
 
 @media screen and (max-width: 600px){
@@ -410,6 +409,16 @@ h3 {
 }
 .flex-container-row {
     flex-direction: row;
+}
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.gap-05 {
+    gap: 3px;
+}
+.gap-1 {
+    gap: 6px;
 }
 .gap-2 {
     gap: 12px;

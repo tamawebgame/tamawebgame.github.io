@@ -83,6 +83,8 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Kumbh+Sans:wght@100..900&display=swap"
         rel="stylesheet">
@@ -94,7 +96,7 @@
     <div class="logo-container">
         <img alt="logo" src="img/logo_02.png" class="logo"></img>
     </div>
-    <div class="top-gradient"></div>
+    <!-- <div class="top-gradient"></div> -->
     <div class="title-solid">
         Raise, care for, and play with your virtual pet in this
 
@@ -293,54 +295,60 @@
                 <a target="_blank" class="btn primary w-initial" 
                 style="font-size: x-large;"
                 href="https://autosam.github.io/Tamaweb">
-                    <img alt="play" src="img/play.png"/>
+                    <i class="fa-solid fa-circle-play"></i>
                     Play Tamaweb
                 </a>
                 <a target="_blank" class="btn w-initial" href="https://samandev.itch.io/tamaweb">
-                    <img alt="itch logo" src="img/itch.png"/>
+                    <i class="fa-brands fa-itch-io"></i>
                     Play on itch.io
                 </a>
                 <a target="_blank" class="btn w-initial" href="https://samandev.itch.io/tamaweb/purchase">
-                    <img alt="windows logo" src="img/windows.png"/>
+                    <i class="fa-brands fa-windows"></i>
                     Windows Client
                 </a>
                 <a target="_blank" class="btn w-initial" href="https://samandev.itch.io/tamaweb/purchase">
-                    <img alt="android logo" src="img/android.png"/>
+                    <i class="fa-brands fa-android"></i>
                     Android Client
                 </a>
                 <a target="_blank" class="btn w-initial" href="https://tamawebgame.github.io/creator/">
-                    <img alt="creator logo" src="img/repairing-service.png"/>
+                    <i class="fa-solid fa-gears"></i>
                     Mod Creator
                 </a>
                 <a target="_blank" class="btn w-initial" href="https://tamaweb.wiki.gg">
                     <img style="width: 86px" alt="wiki logo" src="img/wiki_logo.png"/>
                     Official Wiki
-                    <div class="badge">NEW!</div>
+                    <!-- <div class="badge">NEW!</div> -->
                 </a>
                 <br>
                 <b>Socials</b>
                 <a target="_blank" class="btn w-initial" href="https://tamawebgame.github.io/discord">
-                    <img alt="discord logo" src="img/discord.png"/>
+                    <i class="fa-brands fa-discord"></i>
                     Join Discord
+                    <div class="badge flex flex-center gap-1">
+                        <i class="fa-solid fa-users fa-xs"></i>
+                        <span id="discord-member-count">
+                            <i class="fa-solid fa-spinner fa-spin fa-xs"></i>
+                        </span>
+                    </div>
                 </a>
                 <iframe id="discord-widget" src="https://discord.com/widget?id=1144657755093860372&theme=dark" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                 <a target="_blank" class="btn w-initial" href="https://tamawebgame.github.io/blog">
-                    <img alt="blog icon" src="img/blog.png"/>
+                    <i class="fa-solid fa-newspaper"></i>
                     Blog and News
                 </a>
                 <a target="_blank" class="btn w-initial" href="https://www.instagram.com/tamaweb_game/">
-                    <img alt="instagram logo" src="img/instagram.png"/>
+                    <i class="fa-brands fa-instagram"></i>
                     Follow on Instagram
                 </a>
                 <a target="_blank" class="btn w-initial" href="https://www.tiktok.com/@samandevgames?_t=8rmMbdc7Vnb&_r=1">
-                    <img alt="tiktok logo" src="img/tiktok.png"/>
+                    <i class="fa-brands fa-tiktok"></i>
                     Follow on TikTok
                 </a>
                 <br>
                 <b>Platforms</b>
                 <div class="platforms-container">
                     <div class="platform-badge">
-                        <img alt="browser logo" src="img/browser.png"/>
+                        <i class="fa-solid fa-window-maximize fa-2x"></i>
                         <div>
                             <small>Play on</small>
                             <br>
@@ -348,7 +356,7 @@
                         </div>
                     </div>
                     <div class="platform-badge">
-                        <img alt="windows logo" src="img/windows.png"/>
+                        <i class="fa-brands fa-windows fa-2x"></i>
                         <div>
                             <small>Install on</small>
                             <br>
@@ -356,19 +364,20 @@
                         </div>
                     </div>
                     <div class="platform-badge">
-                        <img alt="android logo" src="img/android.png"/>
+                        <i class="fa-brands fa-android fa-2x"></i>
                         <div>
-                            <small>PWA on</small>
+                            <small>Install on</small>
                             <br>
                             Android
                         </div>
                     </div>
                     <div class="platform-badge">
-                        <img alt="iphone logo" src="img/phone.png"/>
+                        <i class="fa-solid fa-mobile fa-2x"></i>
                         <div>
-                            <small>Install as</small>
+                            <small>Install on</small>
                             <br>
-                            PWA App
+                            iPhone
+                            <small style="font-size: x-small;">(PWA)</small>
                         </div>
                     </div>
                 </div>
