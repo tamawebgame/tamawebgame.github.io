@@ -1,9 +1,11 @@
 :root {
-    --bg-color-1: #F1B1C1;
-    --btn-bg-color-1: #D486B8;
-    --btn-bg-color-on-1: #3e2736;
-    --btn-bg-color-2: #dc98f7;
-    --btn-bg-color-on-2: #3b0052;
+    --btn-color-3: #FFF6F0;
+    --btn-color-2: #FFD793;
+    --btn-color-1: #FFD4D4;
+    --panel-color-1: #FFF6F0;
+    --text-color-1: #362423;
+    --bg-color-1: #FFF6F0;
+    --bg-color-2: #A3E3E2;
 }
 
 .kumbh-sans-font {
@@ -15,11 +17,20 @@
         "YOPQ" 300;
 }
 
+body {
+    background-color: var(--bg-color-1);
+    /* background: url("img/bg_tiled_01.png"); */
+    background-size: 200px;
+    font-family: "Kumbh Sans";
+    padding: 30px;
+    animation: background-scroll 45s infinite linear;
+    color: var(--text-color-1);
+}
+
 .btn {
     all: unset;
-    background-color: #F1B1C1;
-    color: #4a002d;
-    border: 2px solid #D98DBA;
+    background-color: var(--btn-color-1);
+    border: 2px solid white;
     width: fit-content;
     padding: 10px 20px;
     border-radius: 6px;
@@ -34,9 +45,6 @@
 .btn > img {
     width: 20px;
 }
-.btn > i {
-    width: 20px;
-}
 .btn .big-img {
     width: 60px;
     position: absolute;
@@ -44,19 +52,16 @@
     z-index: 2;
 }
 .btn:hover, .btn:active {
-    background-color: #d4879a;
-    border-color: #d4879a;
-    color: #4f0014;
+    background-color: color-mix(in srgb, var(--btn-color-1) 50%, white);
+    border-color: color-mix(in srgb, var(--btn-color-1) 50%, white);
 }
 .btn.primary {
-    background-color: #6D3396;
-    border-color: #6D3396;
-    color: #ffffff;
+    background-color: var(--btn-color-2);
+    border-color: white;
 }
 .btn.primary:hover {
-    background-color: #542178;
-    border-color: #542178;
-    color: #ffffff;
+    background-color: color-mix(in srgb, var(--btn-color-2) 50%, white);
+    border-color: color-mix(in srgb, var(--btn-color-2) 50%, white);
 }
 
 .btn:disabled {
@@ -64,16 +69,6 @@
     color: rgb(109, 109, 109);
     border-color: darkgray;
     pointer-events: none;
-}
-
-body {
-    background-color: var(--bg-color-1);
-    background: url("img/bg_tiled_01.png");
-    background-size: 200px;
-    font-family: "Kumbh Sans";
-    padding: 30px;
-    animation: background-scroll 45s infinite linear;
-    color: #4a002d;
 }
 
 @keyframes background-scroll {
@@ -137,13 +132,11 @@ h2 {
 }
 
 .panel {
-    background: rgba(255, 255, 255, 0.25);
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.75));
-    background: #edcec52d;
+    background: var(--panel-color-1);
     padding: 20px;
     border-radius: 20px;
-    border: 2px solid #edcec57f;
-    backdrop-filter: blur(6px);
+    border: 2px solid white;
+    box-shadow: 0px 3px 10px 0px #00000026;
 }
 
 .panel > ul {
@@ -246,14 +239,13 @@ h3 {
 
 /* title */
 .title-solid {
+    background-color: var(--bg-color-2);
     text-align: center;
-    background: #b27db57a;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 20px;
-    color: #723e75;
     font-weight: bold;
-    border: 2px solid #723e751f;
+    border: 2px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -270,8 +262,6 @@ h3 {
     flex-shrink: 0;
     cursor: pointer;
     transition: transform 0.25s;
-    /* border-color: #d98dba; */
-    color: #744176;
     background: #ffffff;
 }
 .postContainer:hover {
@@ -300,7 +290,7 @@ h3 {
     font-weight: bold;
 }
 .postContainer__infoContainer__type {
-    background: #7441762e;
+    background: color-mix(in srgb, currentColor 15%, transparent);
     font-size: x-small;
     padding: 4px 8px;
     border-radius: 10px;
@@ -353,7 +343,7 @@ h3 {
     flex-direction: row;
     gap: 40px;
     box-shadow: 1px 1px black;
-    background: #4a002d;
+    background: var(--text-color-1);
 }
 
 .input-code__icon {
@@ -447,7 +437,7 @@ h3 {
 }
 
 .badge {
-    color: #9f00ff;
+    color: color-mix(in srgb, var(--btn-color-3) 100%, black);
     position: absolute;
     top: -4px;
     right: -12px;
@@ -455,4 +445,6 @@ h3 {
     padding: 2px 10px;
     border-radius: 50px;
     backdrop-filter: blur(12px);
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.338);
+    border: 2px solid white;
 }
