@@ -148,7 +148,7 @@ h2 {
     padding: 20px;
     border-radius: 20px;
     border: 2px solid white;
-    box-shadow: 0px 3px 10px 0px #00000026;
+    box-shadow: 0px 3px 10px 0px #0000001c;
 }
 
 .panel > ul {
@@ -434,9 +434,11 @@ h3 {
 }
 .form-control > input, .form-control > textarea {
     all: unset;
-    border-bottom: 1px solid;
+    border: 1px solid;
+    border-color: color-mix(in srgb, currentColor 25%, transparent);
     background: rgba(255, 255, 255, 0.5);
-    padding: 8px 12px;
+    padding: 12px 12px;
+    border-radius: 24px;
 }
 .form-control > input:focus, .form-control > textarea:focus {
     /* border-bottom:2px solid black; */
