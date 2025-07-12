@@ -2,10 +2,13 @@
     --btn-color-3: #FFF6F0;
     --btn-color-2: #FFD793;
     --btn-color-1: #FFD4D4;
+    --btn-color-4: #EF476F;
     --panel-color-1: #FFF6F0;
     --text-color-1: #362423;
     --bg-color-1: #FFF6F0;
     --bg-color-2: #A3E3E2;
+
+    --header-height: 64px;
 }
 
 .kumbh-sans-font {
@@ -25,6 +28,7 @@ body {
     padding: 30px;
     animation: background-scroll 45s infinite linear;
     color: var(--text-color-1);
+    padding-top: var(--header-height)
 }
 
 .btn {
@@ -32,7 +36,7 @@ body {
     background-color: var(--btn-color-1);
     border: 2px solid white;
     width: fit-content;
-    padding: 10px 20px;
+    padding: 16px 20px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
@@ -58,10 +62,18 @@ body {
 .btn.primary {
     background-color: var(--btn-color-2);
     border-color: white;
+    padding: 24px 20px;
 }
 .btn.primary:hover {
     background-color: color-mix(in srgb, var(--btn-color-2) 50%, white);
     border-color: color-mix(in srgb, var(--btn-color-2) 50%, white);
+}
+.btn.bold {
+    background-color: var(--btn-color-4);
+    color: white;
+}
+.btn.bold:hover {
+    background-color: color-mix(in srgb, var(--btn-color-4) 90%, black);
 }
 
 .btn:disabled {
@@ -447,4 +459,61 @@ h3 {
     backdrop-filter: blur(12px);
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.338);
     border: 2px solid white;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    height: var(--header-height);
+    background: var(--bg-color-1);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 36px;
+    box-sizing: border-box;
+    gap: 24px;
+    font-size: small;
+    border-bottom: 2px solid white;
+}
+
+nav .header-logo {
+    width: 148px;
+    margin-top: 2px;
+    border: none !important;
+}
+
+nav .btn {
+    padding: 10px 20px !important;
+    border-radius: 24px;
+}
+
+/* Basic Styling */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+nav ul a {
+  display: block;
+  text-decoration: none;
+  padding: 8px 8px;
+  border-bottom: 2px solid transparent;
+  color: var(--text-color-1);
+}
+
+nav a:hover {
+  border-bottom-color: currentColor;
+}
+
+/* Example of responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack links vertically */
+  }
 }
