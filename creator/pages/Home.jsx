@@ -58,8 +58,6 @@ export default function Home() {
     setValue(newValue);
   };
 
-  return <ErrorFallback />;
-
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <Box sx={{ width: "100%" }}>
