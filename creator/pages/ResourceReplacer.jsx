@@ -71,7 +71,7 @@ export default function ResourceReplacer() {
     }
 
     return (
-        <Stack spacing={2} m={"15px"}>
+        <Stack spacing={2}>
             <Stack spacing={1} sx={{ p: 1, border: "solid 1px lightgray", borderRadius: 2 }}>
                 <Typography>Package Metadata</Typography>
                 <TextField error={notValid} value={packageName} onChange={(e) => setPackageName(e.target.value)} variant="outlined" label="Name" />
