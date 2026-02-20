@@ -8,6 +8,7 @@ import { Paper, Skeleton, TextField } from "@mui/material";
 
 import ResourceReplacer from "./ResourceReplacer";
 import GrowthChartMapper from "./GrowthChart";
+import CharactersList from "./CharactersList";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -35,8 +36,9 @@ export default function Home() {
   return (
     <Box sx={{ width: "100%" }}>
       <Paper square elevation={1}>
-        <Tabs onChange={handleChange} value={selectedTab}>
+        <Tabs onChange={handleChange} value={selectedTab} variant="scrollable">
           <Tab label="Replace Resources" value={0} />
+          <Tab label="Characters List" value={2} />
           <Tab label="Map Growth Chart" value={1} />
         </Tabs>
       </Paper>
@@ -45,6 +47,9 @@ export default function Home() {
       </CustomTabPanel>
       <CustomTabPanel value={selectedTab} index={1}>
         <GrowthChartMapper />
+      </CustomTabPanel>
+      <CustomTabPanel value={selectedTab} index={2}>
+        <CharactersList />
       </CustomTabPanel>
     </Box>
   );

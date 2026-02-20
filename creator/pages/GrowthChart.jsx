@@ -19,9 +19,9 @@ import { saveFile } from "../utils";
 const allStages = [
   { name: "Baby", list: PET_BABY_CHARACTERS, cellSize: 16 },
   { name: "Child", list: PET_CHILD_CHARACTERS, cellSize: 24 },
-  { name: "Teens", list: PET_TEEN_CHARACTERS, cellSize: 24 },
-  { name: "Adults", list: PET_ADULT_CHARACTERS, cellSize: 32 },
-  { name: "Elders", list: PET_ELDER_CHARACTERS, cellSize: 32 },
+  { name: "Teen", list: PET_TEEN_CHARACTERS, cellSize: 24 },
+  { name: "Adult", list: PET_ADULT_CHARACTERS, cellSize: 32 },
+  { name: "Elder", list: PET_ELDER_CHARACTERS, cellSize: 32 },
 ];
 
 const SLOT_DELIMITER = "^";
