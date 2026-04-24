@@ -1,4 +1,13 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="initial-scale=1,width=device-width"/><title>Tamaweb | Mod Creator</title><script>class SpriteElement extends HTMLElement {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    
+    <title>Tamaweb | Mod Creator</title>
+
+    <script>
+        class SpriteElement extends HTMLElement {
             constructor() {
                 super();
                 this.attachShadow({ mode: "open" });
@@ -33,4 +42,14 @@
                 return ["src", "width", "height", "index"];
             }
         }
-        customElements.define("c-sprite", SpriteElement);</script><script defer="defer" src="bundle.js"></script></head><body><div id="root"></div><script src="https://autosam.github.io/Tamaweb/resources/data/CharacterDefinitions.js"></script><script src="https://autosam.github.io/Tamaweb/resources/data/SpriteDefinitions.js"></script><script src="dist/bundle.js"></script></body></html>
+        customElements.define("c-sprite", SpriteElement);
+    </script>
+<script defer src="bundle.js"></script></head>
+<body>
+    <div id="root"></div>
+
+    <script src="https://autosam.github.io/Tamaweb/resources/data/CharacterDefinitions.js"></script>
+    <script src="https://autosam.github.io/Tamaweb/resources/data/SpriteDefinitions.js"></script>
+    <script src="dist/bundle.js"></script>
+</body>
+</html>
