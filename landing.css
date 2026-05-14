@@ -2,7 +2,7 @@
     --btn-color-3: #fff6f0;
     --btn-color-2: #ffd793;
     --btn-color-1: #ffd4d4;
-    --btn-color-4: #ef476f;
+    --btn-color-4: #FF4F52;
     --panel-color-1: #fff6f0;
     --text-color-1: #362423;
     --bg-color-1: #fff6f0;
@@ -33,7 +33,7 @@ body {
 main {
     background-color: var(--bg-color-1);
     margin: 32px;
-    margin-top: 0px;
+    margin-top: var(--header-height);
     border-radius: 30px;
     overflow: hidden;
 }
@@ -53,7 +53,7 @@ main {
     border: 2px solid white;
     width: fit-content;
     padding: 16px 20px;
-    border-radius: 6px;
+    border-radius: 16px;
     cursor: pointer;
     font-weight: bold;
     display: inline-flex;
@@ -61,6 +61,7 @@ main {
     justify-content: center;
     gap: 8px;
     position: relative;
+    box-shadow: inset -126px -126px 0px -120px #0000000d, inset -118px -118px 0px -120px #0000000d;
 }
 
 .btn>img {
@@ -101,9 +102,11 @@ main {
 }
 
 .btn:disabled {
-    background: darkgray;
+    /* background: darkgray;
     color: rgb(109, 109, 109);
-    border-color: darkgray;
+    border-color: darkgray; */
+    opacity: .5;
+    filter: saturate(0.5);
     pointer-events: none;
 }
 
@@ -175,6 +178,9 @@ h2 {
     border-radius: 20px;
     border: 2px solid color-mix(in srgb, var(--bg-color-1) 95%, black);
     /* box-shadow: 0px 3px 10px 0px #0000001c; */
+
+    /* border: unset;
+    box-shadow: 2px 2px 0 6px #FF4F52, 6px 6px 0 6px #FFA74F; */
 }
 
 .panel>ul {
@@ -240,13 +246,13 @@ h3 {
 .platform-badge {
     display: flex;
     gap: 16px;
-    border: 1px solid;
     width: fit-content;
     padding: 5px 10px;
     border-radius: 6px;
     flex-grow: 1;
     justify-content: center;
     align-items: center;
+    background: color-mix(in srgb, currentColor 5%, transparent);
 }
 
 /* discord widget */
@@ -288,6 +294,7 @@ h3 {
 
 .postContainer__imageContainer>img {
     max-height: 128px;
+    min-height: 128px;
     min-width: 256px;
     object-fit: cover;
     border-bottom: 1px solid;
@@ -420,6 +427,9 @@ h3 {
 .margin-none {
     margin: 0;
 }
+.margin-auto {
+    margin: auto
+}
 
 /* flex */
 .flex {
@@ -494,20 +504,45 @@ h3 {
 }
 
 nav {
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 100;
     height: var(--header-height);
-    background: var(--bg-color-back);
-    width: 100%;
+    width: stretch;
     display: flex;
     align-items: center;
     padding: 0 36px;
     box-sizing: border-box;
     gap: 24px;
     font-size: small;
-    /* border-bottom: 2px solid white; */
+    transition: all 0.2s;
+    animation: fadeAnim2 1s;
+
+    .play-btn {
+        visibility: hidden;
+    }
+    ul {
+        margin-left: auto !important;
+    }
+}
+
+nav.scrolled {
+    background: var(--bg-color-back);
+    margin: 0 72px;
+    margin-top: 24px;
+    border-radius: 999px;
+    box-shadow: 0 0 black;
+    border: 2px solid color-mix(in srgb, var(--bg-color-1) 95%, black);
+    height: calc(var(--header-height) / 1.15);
+
+    .play-btn {
+        visibility: visible;
+    }
+}
+
+@keyframes fadeAnim2 {
+    from { transform: translateY(-100px); }
 }
 
 nav .header-logo {
@@ -525,7 +560,7 @@ nav .btn {
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    /* margin: 0; */
     display: flex;
     align-items: center;
     gap: 12px;
@@ -539,7 +574,8 @@ nav ul a {
     color: var(--text-color-1);
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 6px;   
+    border-radius: 6px;
 }
 
 nav a:hover {
@@ -547,7 +583,7 @@ nav a:hover {
 }
 
 .hero-image-container {
-    --size: 400px;
+    --size: 600px;
     background: url("img/bg_tiled_02.png");
     height: var(--size);
     background-size: contain;
@@ -556,13 +592,17 @@ nav a:hover {
     animation: heroImageBgAnim 10s infinite linear;
     
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     position: relative;
 
     .hero-image-logo {
-        height: calc(var(--size) / 1.25);
+        height: calc(var(--size) / 1.5);
         animation: heroImageFrontAnim 2s alternate infinite;
+    }
+    .panel {
+        flex-grow: 1;
+        max-width: 25%;
     }
 }
 @keyframes heroImageBgAnim {
@@ -584,6 +624,34 @@ nav a:hover {
 
 /* Example of responsiveness */
 @media (max-width: 768px) {
+    main {
+        margin: 0;
+        border-radius: unset;
+    }
+
+    .hero-image-container {
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        .hero-image-logo {
+            margin-top: calc(var(--header-height) / 2);
+            height: calc(var(--size) / 2);
+        }
+        .panel {
+            max-width: unset;
+            flex-grow: 1;
+            width: stretch;
+            background: 0;
+            border: 0;
+        }
+    }
+
+    .title-solid {
+        flex-direction: column;
+    }
+
     .app {
         padding: 10px;
     }
@@ -619,6 +687,21 @@ nav a:hover {
 
     nav {
         flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        animation: unset;
+    }
+    nav.scrolled {
+        opacity: 1;
+        animation: fadeAnim2 1s;
+        height: auto;
+        margin: 0;
+        border-radius: 0;
+        border: 0;
+        height: var(--header-height);
+        /* background: unset; */
+        border-radius: 0 0 32px 32px;
+        border-bottom: 2px solid color-mix(in srgb, var(--bg-color-1) 95%, black);
     }
 
     nav .play-btn {

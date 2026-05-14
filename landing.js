@@ -7,6 +7,7 @@
 
   const createPostElements = (posts) => {
     const postsContainer = document.querySelector(".posts");
+    postsContainer.innerHTML = '';
     const cloneable = document.querySelector(".cloneable > .postContainer");
     posts.forEach((post) => {
       const component = cloneable.cloneNode(true);
@@ -89,6 +90,19 @@
     document.querySelector('#discord-member-count').textContent = `${json.approximate_member_count}`
   }
 
+  const setupScrollListener = () => {
+    const navElement = document.querySelector('nav');
+    const check = () => {
+      const hasScrolled = window.scrollY !== 0;
+      if(hasScrolled) navElement.classList.add('scrolled');
+      else navElement.classList.remove('scrolled');
+    }
+    window.addEventListener('scroll', check);
+    check();
+  }
+
+
+  setupScrollListener();
   initializeFeedback();
   populateDiscordMemberCount();
   const posts = await getPosts();
