@@ -537,6 +537,42 @@ nav a:hover {
     border-bottom-color: currentColor;
 }
 
+.hero-image-container {
+    --size: 400px;
+    background: url("img/bg_tiled_02.png");
+    height: var(--size);
+    background-size: contain;
+    background-repeat: repeat-x;
+    image-rendering: pixelated;
+    animation: heroImageBgAnim 10s infinite linear;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .hero-image-logo {
+        height: calc(var(--size) / 1.25);
+        animation: heroImageFrontAnim 2s alternate infinite;
+    }
+}
+@keyframes heroImageBgAnim {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: var(--size);
+    }
+}
+@keyframes heroImageFrontAnim {
+    from {
+        transform: translateY(-2px);
+    }
+    to {
+        transform: translateY(2px);
+    }
+}
+
 /* Example of responsiveness */
 @media (max-width: 768px) {
     .app {
