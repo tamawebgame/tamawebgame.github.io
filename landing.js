@@ -23,8 +23,8 @@
 
       // image.src = `assets/post-images/${post.image ?? "lg.png"}`;
       image.src = `https://tamawebgame.github.io/blog/post-images/${post.image ?? "lg.png"}`;
-      subTitle.textContent = post.subTitle;
-      title.textContent = post.title;
+      subTitle.textContent = post.subTitle || '-';
+      title.textContent = post.title || '-';
 
       component.onclick = () => {
         window.location.href = `blog?post=${post.title}`;
@@ -91,11 +91,20 @@
   }
 
   const setupScrollListener = () => {
+    let latestState;
     const navElement = document.querySelector('nav');
     const check = () => {
       const hasScrolled = window.scrollY !== 0;
       if(hasScrolled) navElement.classList.add('scrolled');
       else navElement.classList.remove('scrolled');
+
+      if(latestState !== hasScrolled){
+        latestState = hasScrolled;
+        navElement.getAnimations?.()?.forEach((anim) => {
+          anim.cancel();
+          anim.play();
+        });
+      }
     }
     window.addEventListener('scroll', check);
     check();

@@ -41,6 +41,7 @@ main {
 .app {
     padding: 32px;
     padding-top: 16px !important;
+    background: url('img/bg_pattern.png');
 }
 
 .header-image {
@@ -181,6 +182,17 @@ h2 {
 
     /* border: unset;
     box-shadow: 2px 2px 0 6px #FF4F52, 6px 6px 0 6px #FFA74F; */
+}
+
+.panel .image-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+    img {
+        height: 128px;
+        image-rendering: pixelated;
+    }
 }
 
 .panel>ul {
@@ -623,7 +635,7 @@ nav a:hover {
 }
 
 /* Example of responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     main {
         margin: 0;
         border-radius: unset;
@@ -686,26 +698,29 @@ nav a:hover {
     }
 
     nav {
-        flex-direction: column;
+        /* flex-direction: column; */
         justify-content: center;
-        opacity: 0;
         animation: unset;
+        transition: all 0.1s;
+        animation: fadeAnim2 reverse forwards 1s;
+        .play-btn {
+            visibility: visible;
+        }
     }
     nav.scrolled {
         opacity: 1;
-        animation: fadeAnim2 1s;
+        animation: fadeAnim2 forwards 0.5s;
         height: auto;
         margin: 0;
         border-radius: 0;
         border: 0;
         height: var(--header-height);
-        /* background: unset; */
         border-radius: 0 0 32px 32px;
         border-bottom: 2px solid color-mix(in srgb, var(--bg-color-1) 95%, black);
     }
 
     nav .play-btn {
-        display: none;
+        /* display: none; */
     }
 
     nav ul {
