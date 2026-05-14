@@ -7,8 +7,9 @@
     --text-color-1: #362423;
     --bg-color-1: #fff6f0;
     --bg-color-2: #a3e3e2;
+    --bg-color-back: white;
 
-    --header-height: 64px;
+    --header-height: 80px;
 }
 
 .kumbh-sans-font {
@@ -20,13 +21,21 @@
 }
 
 body {
-    background-color: var(--bg-color-1);
+    background-color: var(--bg-color-back);
     /* background: url("img/bg_tiled_01.png"); */
     background-size: 200px;
     font-family: "Kumbh Sans";
     animation: background-scroll 45s infinite linear;
     color: var(--text-color-1);
     margin: 0;
+}
+
+main {
+    background-color: var(--bg-color-1);
+    margin: 32px;
+    margin-top: 0px;
+    border-radius: 30px;
+    overflow: hidden;
 }
 
 .app {
@@ -490,7 +499,7 @@ nav {
     top: 0;
     z-index: 100;
     height: var(--header-height);
-    background: var(--bg-color-1);
+    background: var(--bg-color-back);
     width: 100%;
     display: flex;
     align-items: center;
@@ -498,7 +507,7 @@ nav {
     box-sizing: border-box;
     gap: 24px;
     font-size: small;
-    border-bottom: 2px solid white;
+    /* border-bottom: 2px solid white; */
 }
 
 nav .header-logo {
