@@ -304,7 +304,7 @@ class InteractiveTamawebPet {
 
   const parentContainer = document.createElement('div');
   parentContainer.className = 'interactive-pet-container';
-  document.body.appendChild(parentContainer)
+  // document.body.appendChild(parentContainer)
 
   const mousePos = { x: 0, y: 0 };
   document.addEventListener("mousemove", (event) => {
