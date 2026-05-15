@@ -7,6 +7,7 @@
 
   const createPostElements = (posts) => {
     const postsContainer = document.querySelector(".posts");
+    postsContainer.innerHTML = '';
     const cloneable = document.querySelector(".cloneable > .postContainer");
     posts.forEach((post) => {
       const component = cloneable.cloneNode(true);
@@ -22,8 +23,8 @@
 
       // image.src = `assets/post-images/${post.image ?? "lg.png"}`;
       image.src = `https://tamawebgame.github.io/blog/post-images/${post.image ?? "lg.png"}`;
-      subTitle.textContent = post.subTitle;
-      title.textContent = post.title;
+      subTitle.textContent = post.subTitle || '-';
+      title.textContent = post.title || '-';
 
       component.onclick = () => {
         window.location.href = `blog?post=${post.title}`;
@@ -81,7 +82,38 @@
     };
   };
 
+  const populateDiscordMemberCount = async () => {
+    const discordInviteId = '2Gaepf3Vhv';
+    const endpoint = `https://discord.com/api/v9/invites/${discordInviteId}?with_counts=true&with_expiration=true`;
+    const response = await fetch(endpoint);
+    const json = await response.json();
+    document.querySelector('#discord-member-count').textContent = `${json.approximate_member_count}`
+  }
+
+  const setupScrollListener = () => {
+    let latestState;
+    const navElement = document.querySelector('nav');
+    const check = () => {
+      const hasScrolled = window.scrollY !== 0;
+      if(hasScrolled) navElement.classList.add('scrolled');
+      else navElement.classList.remove('scrolled');
+
+      if(latestState !== hasScrolled){
+        latestState = hasScrolled;
+        navElement.getAnimations?.()?.forEach((anim) => {
+          anim.cancel();
+          anim.play();
+        });
+      }
+    }
+    window.addEventListener('scroll', check);
+    check();
+  }
+
+
+  setupScrollListener();
   initializeFeedback();
+  populateDiscordMemberCount();
   const posts = await getPosts();
   createPostElements(posts);
 })();
