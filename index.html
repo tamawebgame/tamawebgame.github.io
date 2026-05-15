@@ -127,7 +127,10 @@
         </ul>
         <a target="_blank" href="https://autosam.github.io/Tamaweb" style="margin-left: auto;"
             class="btn bold play-btn">
-            <span style="width: max-content">Play Tamaweb!</span>
+            <span style="width: max-content">
+                <span class="desktop-only">Play Tamaweb!</span>
+                <span class="mobile-only">Play!</span>
+            </span>
             <i class="fa-solid fa-angle-right"></i>
         </a>
     </nav>
@@ -178,7 +181,7 @@
                     <!-- <div class="logo-container">
                         <img alt="logo" src="img/logo_03.png" class="logo">
                     </div> -->
-                    <img alt="logo" src="img/tamaweb_02.png" class="banner">
+                    <img alt="tamaweb_banner" src="img/tamaweb_02.png" class="banner">
 
                     <div class="panel">
                         <h3>
@@ -463,14 +466,14 @@
         <div class="cloneable" style="display: none;">
             <div class="postContainer">
                 <div class="postContainer__imageContainer">
-                    <img alt="post image"></img>
+                    <img alt="post_image"></img>
                 </div>
                 <div class="postContainer__infoContainer">
                     <div class="postContainer__infoContainer_inner-left">
                         <div class="postContainer__infoContainer__subTitle"></div>
                         <div class="postContainer__infoContainer__title"></div>
                     </div>
-                    <div class="postContainer__infoContainer_inner-right">
+                    <div class\="postContainer__infoContainer_inner-right">
                         <div class="postContainer__infoContainer__type">
                             Update
                         </div>
@@ -480,6 +483,7 @@
         </div>
     </main>
     <script src="landing.js"></script>
+    <script defer src="pet-spawner.js"></script>
 </body>
 
 </html>

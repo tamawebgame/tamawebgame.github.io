@@ -28,6 +28,7 @@ body {
     animation: background-scroll 45s infinite linear;
     color: var(--text-color-1);
     margin: 0;
+    position: relative;
 }
 
 main {
@@ -635,6 +636,10 @@ nav a:hover {
     }
 }
 
+.mobile-only {
+    display: none;
+}
+
 /* Example of responsiveness */
 @media (max-width: 900px) {
     main {
@@ -727,5 +732,17 @@ nav a:hover {
     nav ul {
         display: none;
         flex-direction: column;
+    }
+
+    .footer {
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: initial;
     }
 }
