@@ -641,7 +641,7 @@ nav a:hover {
 }
 
 /* Example of responsiveness */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     main {
         margin: 0;
         border-radius: unset;
@@ -660,9 +660,10 @@ nav a:hover {
         .panel {
             max-width: unset;
             flex-grow: 1;
-            width: stretch;
+            width: 100%;
             background: 0;
             border: 0;
+            box-sizing: border-box;
         }
     }
 
