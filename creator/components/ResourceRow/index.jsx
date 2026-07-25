@@ -100,6 +100,7 @@ export function ResourceRow({ onDelete, index, rowData }) {
           options={[
             { label: "Sprites", disabled: true },
             ...SPRITES,
+            ...NPC_CHARACTERS,
 
             { label: "Animals", disabled: true },
             ...ANIMAL_CHARACTERS,
