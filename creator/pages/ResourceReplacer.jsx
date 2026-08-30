@@ -22,6 +22,7 @@ import { ResourceRow } from "../components/ResourceRow";
 import { LIFE_STAGES, saveFile } from "../utils";
 import { uid } from "uid";
 import { AdditionRow } from "../components/AdditionRow";
+import { NewBadge } from "../components/NewBadge";
 
 export default function ResourceReplacer() {
   const [resourceRows, setResourceRows] = useState([]); // [{ source: '', target: '', id: Date.now(), }]
@@ -221,10 +222,12 @@ export default function ResourceReplacer() {
       </Stack>
 
       <Stack
+        position='relative'
         spacing={1}
         sx={{ p: 2, border: "1px solid lightgray", borderRadius: 2 }}
       >
-        <Alert icon={<Add />} color="info">
+        <NewBadge until={new Date('9/16/2026')} />
+        <Alert sx={{position: 'relative'}} icon={<Add />} color="info">
           <AlertTitle>Resource Additions</AlertTitle>
           You can use this section if you want to <i>add</i> new resources
           without replacing one of the existing ones.
