@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <CssVarsProvider theme={theme}>
     <CssBaseline />
-    <Header title="Create Tamaweb Resource Override Package" />
+    <Header title="Create Tamaweb Mod Package" />
     <Home />
   </CssVarsProvider >
 );

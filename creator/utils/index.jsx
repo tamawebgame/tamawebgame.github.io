@@ -15,3 +15,5 @@ export function getImageDataSize(data, asRaw){
     if(asRaw) return decoded.length;
     return filesize(decoded.length);
 }
+
+export * from './constants'

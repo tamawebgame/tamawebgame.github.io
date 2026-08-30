@@ -37,7 +37,7 @@ export default function Home() {
     <Box sx={{ width: "100%" }}>
       <Paper square elevation={1}>
         <Tabs onChange={handleChange} value={selectedTab} variant="scrollable">
-          <Tab label="Replace Resources" value={0} />
+          <Tab label="Modify Resources" value={0} />
           <Tab label="Characters List" value={2} />
           <Tab label="Map Growth Chart" value={1} />
         </Tabs>

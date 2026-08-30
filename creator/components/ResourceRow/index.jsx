@@ -18,7 +18,6 @@ export function ResourceRow({ onDelete, index, rowData }) {
   const [targetImageData, setTargetImageData] = useState(rowData.target);
   const [targetImageSize, setTargetImageSize] = useState(0);
   const [sourceImage, setSourceImage] = useState(rowData.source);
-  const [imageMismatch, setImageMismatch] = useState(false);
 
   useEffect(() => {
     rowData.source = sourceImage;
